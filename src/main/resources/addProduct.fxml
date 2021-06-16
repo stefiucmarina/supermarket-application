@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="400" prefWidth="600"
+          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          fx:controller="org.marina.controllers.AddProductController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+    </padding>
+
+
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField styleClass="textField" fx:id="nameField" id="nameAddProduct" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField styleClass="textField" fx:id="categoryField" id="categoryAddProduct" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Code:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField styleClass="textField" fx:id="codeField" id="codeAddProduct" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField styleClass="textField" fx:id="quantityField" id="quantityAddProduct" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField styleClass="textField" fx:id="priceField" id="priceAddProduct" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#onEnter"/>
+
+    <HBox  alignment="center" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button styleClass="button" onAction="#handleAddProductButton" id="addProductAddProductButton" text="Add Product"/>
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+        <Button styleClass="button" onAction="#handleBackButton" id="backAddProductAdmin" text="Back"/>
+    </HBox>
+
+    <Text fx:id="addProductMessage" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+
+</GridPane>

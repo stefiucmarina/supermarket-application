@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" vgap="10" prefWidth="600" prefHeight="400"
+          xmlns="http://javafx.com/javafx/8.0.172-ea"
+          fx:controller="org.marina.controllers.LoginController"
+          styleClass="root-pane">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+    </padding>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="0">
+      <Text styleClass="title" id="title-text" text="Supermarket Application" />
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="2">
+        <Label text="Username:" />
+    </HBox>
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="3">
+        <TextField styleClass="textField" fx:id="usernameField" id="usernameLogin"/>
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <Label text="Password:"/>
+    </HBox>
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="5">
+        <PasswordField styleClass="textField" fx:id="passwordField" id="passwordLogin" onAction="#onEnter"/>
+    </HBox>
+
+    <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="6">
+        <Button styleClass="button" onAction="#handleRegisterButton" id="registerLoginButton" text="Register"/>
+    </HBox>
+    <HBox  alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button styleClass="button" onAction="#handleLoginButtonAction" id="loginButton" text="Sign In"/>
+    </HBox>
+
+    <HBox alignment="center" spacing="10"  GridPane.columnSpan="2" GridPane.rowIndex="7">
+        <Text fx:id="loginMessage" id="loginMessage"/>
+    </HBox>
+
+
+</GridPane>

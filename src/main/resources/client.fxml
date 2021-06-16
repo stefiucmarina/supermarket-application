@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="400" prefWidth="600"
+          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          fx:controller="org.marina.controllers.ClientController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+    </padding>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="0">
+        <Text styleClass="title" id="title-text" text="Welcome!" />
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="1">
+        <Button styleClass="button" onAction="#handleViewProducts" id="ClientViewProducts" text="View Products"/>
+    </HBox>
+
+    <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField styleClass="textField" fx:id="productNameField" id="productNameField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField styleClass="textField" fx:id="quantityField" id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#onEnter"/>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="4">
+        <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="4">
+            <Button styleClass="button" onAction="#handleAddToCart" id="clientAddToCart" text="Add To Cart"/>
+        </HBox>
+        <HBox  spacing="10" GridPane.columnIndex="1"  GridPane.rowIndex="4">
+            <Button styleClass="button" onAction="#handleRemoveProduct" id="clientRemoveProduct" text="Remove Product"/>
+        </HBox>
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="5">
+        <HBox spacing="10" GridPane.rowIndex="5">
+            <Button styleClass="button" onAction="#handleViewCart" id="viewCart" text="View Cart"/>
+        </HBox>
+    </HBox>
+
+    <HBox alignment="center"  spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="6">
+        <Button styleClass="button" onAction="#handleDisconnect" id="clientDisconnectButton" text="Disconnect"/>
+    </HBox>
+
+    <HBox alignment="center" spacing="10" GridPane.columnSpan="3" GridPane.rowIndex="7">
+        <Text fx:id="clientMessage" id="clientMessage"/>
+    </HBox>
+
+
+</GridPane>

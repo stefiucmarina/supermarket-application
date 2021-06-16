@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="400" prefWidth="600"
+          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          fx:controller="org.marina.controllers.RegistrationController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+    </padding>
+
+    <HBox alignment="center" spacing="10"  GridPane.columnIndex="0" GridPane.columnSpan="2"
+          GridPane.rowIndex="0">
+        <Text styleClass="title" id="title-text" text="Create an account"/>
+    </HBox>
+
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField styleClass="textField" fx:id="usernameField" id="username" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField styleClass="textField" fx:id="passwordField" id="password"  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <ChoiceBox styleClass="choiceBox" fx:id="role" id="role" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+    </ChoiceBox>
+
+    <Text fx:id="registrationMessage" id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5">
+        <Button styleClass="button" onAction="#handleBackButton" id="backRegisterButton" text="Back"/>
+    </HBox>
+
+    <HBox  alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button styleClass="button" onAction="#handleRegisterAction" id="registerButton" text="Register"/>
+    </HBox>
+
+
+</GridPane>
